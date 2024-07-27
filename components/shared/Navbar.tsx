@@ -21,7 +21,7 @@ const Navbar = async() => {
       <div className='md:block hidden'>
           <div className='flex items-center gap-8'>
             {
-              pages && pages.map((page:any)=> <Link key={page.id} href={"#"}>{page.localizeInfos.title}</Link>)
+              pages && pages.map((page:any)=> <Link key={page.id} href={`/${page.pageUrl === "home" ? "/" : page.pageUrl}`}>{page.localizeInfos.title}</Link>)
             }
           </div>
       </div>

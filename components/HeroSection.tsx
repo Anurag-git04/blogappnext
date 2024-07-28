@@ -1,7 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 
-const HeroSection = () => {
+const HeroSection = ({pages}:{pages:any}) => {
+  const data = pages && pages.find((page:any)=> page.pageUrl === "home")?.attributeValues;
+  console.log("new")
+  console.log(data)
+  const title = data.title.value;
+  const bannerImageUrl = data.;
+  const description = ;
   return (
     <div className='flex md:flex-row flex-col items-center max-w-6xl mx-auto my-10 gap-8'>
         <div>
